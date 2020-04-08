@@ -1,0 +1,37 @@
+\begin{thebibliography}{4}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Bosch()]{bosch}
+Firma~Robert Bosch.
+\newblock Partikelsensor.
+\newblock
+  \href{https://www.bosch-mobility-solutions.com/de/produkte-und-services/pkw-und-leichte-nutzfahrzeuge/antriebssysteme/abgasnachbehandlung-denoxtronic/partikelsensor/}{Link
+  zum Artikel}.
+\newblock Zugegriffen: 27.03.2020.
+
+\bibitem[Stefan~Carstens()]{mtec}
+mtec-akademie Stefan~Carstens.
+\newblock Resistive rußsensoren im einsatz in partikelfiltersystemen in den
+  usa.
+\newblock
+  \href{https://www.mtec-akademie.de/fachbeitraege/verbrennungstechnik-elektromobilitaet/resistive-russsensoren-im-einsatz-in-partikelfiltersystemen-in-den-usa}{Link
+  zum Artikel}.
+\newblock Zugegriffen: 27.03.2020.
+
+\bibitem[Stieß(2009)]{messtechniken}
+Matthias Stieß.
+\newblock \emph{Mechanische Verfahrenstechnik - Partikeltechnologie 1}.
+\newblock Springer Verlag, 2009.
+\newblock ISBN: 978-3-540-32551-2.
+
+\bibitem[Zabler(2016)]{feld}
+Erich Zabler.
+\newblock \emph{Sensoren im Kraftfahrzeug}.
+\newblock Springer Vieweg, 2016.
+\newblock ISBN: 978-3-658-11210-3.
+
+\end{thebibliography}
