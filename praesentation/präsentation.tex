@@ -67,162 +67,49 @@
 %#####
 
 
-\title{Partikelsensoren}
-\author{Steffen Walter (1145690)}
-\institute{Duale Hochschule Baden-Württemberg -- Stuttgart\newline Vorlesung: Sensorik und Aktorik}
+\title{Fouriertransformation - Abtasttheorem}
+\author{Steffen Walter (1145690) \ Marvin Gaube (4670273)}
+\author{}
+\institute{Duale Hochschule Baden-Württemberg -- Stuttgart\newline Vorlesung: Digitale Bildverarbeitung}
 \centering
-\date{31. März 2019}
+\date{16. April 2020}
 \begin{document}
 	\maketitle
 	\begin{frame}{Agenda}
 		\section{Agenda}
 		\begin{enumerate}
-			\item Anwendungen
-			\item Messtechniken
+			\item Theoretische Grundlagen
+			\item Praktische Anwendung
+			\item Realisierung
 			\begin{itemize}
-				\item Resistive Messung
-				\item Extinktionsmessung
-				\item Streulichtmessung
-				\item Laserbeugung
+				\item Platzhalter
 			\end{itemize}
 			\item Fazit
 		\end{enumerate}
 	\end{frame}
 
 	
-	\begin{frame}{Anwendungen}
-	\framesubtitle{Wo in der Praxis werden Partikelsensoren benötigt?}
-	\section{Anwendungen}
+	\begin{frame}{Theoretische Grundlagen}
+	\section{Theoretische Grundlagen}
 	\begin{itemize}
-		\item Gase
-		\begin{itemize}
-			\item Abgassystem
-			\item Reinraumüberwachung
-			\item Luftqualitätsüberwachung
-		\end{itemize}
-		\item Flüssigkeiten
-		\begin{itemize}
-			\item Leistungsmessung Filter
-			\item Hydrauliksystemüberwachung
-			\item Wasserqualitätsüberwachung
-			\item Medizintechnik: Reinheit von Injektionslösungen
-		\end{itemize}
+		\item Platzhalter
 	\end{itemize}
 	\end{frame}
 
-	\begin{frame}{Messtechniken}
-	\framesubtitle{Welche verschieden Techniken werden zur Erfassung von Parktikeln verwendet?}
-	\section{Messtechniken}
-		\begin{itemize}
-			\item Resistives Verfahren
-			\item Optische Verfahren	
-			\begin{itemize}
-				\item Extinktionsmessung
-				\item Streulichtmessung
-				\item Laserbeugung
-			\end{itemize}
-		\end{itemize}
+	\begin{frame}{Praktische Anwendung}
+	\framesubtitle{Wo kommt das Abtasttheorem zum Einsatz?}
+	\section{Praktische Anwendung}
 	\end{frame}
 	
-	\begin{frame}{Resistives Verfahren}
-		\begin{block}{Aufbau}
-			Das Sensorelement besteht aus einer Interdigitalstruktur mit zwei kammförmigen Elektroden aus Platin auf einem keramischen Substrat mit einem integrierten Heizelement. Ein Platinmäander dient zur Messung der Temperatur des Sensorelements.
-		\end{block}
-		\begin{multicols}{2}
-		\footnotesize{
-		\begin{itemize}
-			\item Anwendung im Abgassystem von Autos 
-			\item Notwendigkeit durch On-Board-Diagnose-Bestimmungen von Dieselpartikelfiltern
-			\item Messung der Rußemission nach dem Partikelfilter.
-		\end{itemize}
-		\begin{figure}
-			\includegraphics[width=0.35\textheight]{russ.png}
-			\caption{\footnotesize Partikelsensor für Abgassystem. Quelle\cite{bosch}}
-		\end{figure}}
-		\end{multicols}
-	\end{frame}
-
-	\begin{frame}{Resistives Verfahren}
-	\begin{multicols}{2}
-		\footnotesize{
-			\begin{enumerate}
-				\item Anfangs sehr hoher Widerstand
-				\item Spannung wirkt anziehend auf Rußpartikel
-				\item Partikel bilden leitfähige Rußpfade
-				\item Monoton fallende Widerstandskurve
-				\item Ende der Messung bei Schwellwert
-				\item Rücksetzung und Regeneration durch Verbrennung der Ablagerungen
-		\end{enumerate}}
-		\begin{figure}
-			\includegraphics[width=0.6\textheight]{russ_kurve.png}
-			\caption{\footnotesize Funktionsweise eines resistiven Rußsensor. Quelle\cite{mtec}}
-		\end{figure}
-	\end{multicols}
-	\end{frame}	
-
-	\begin{frame}{Resistives Verfahren}
-	\begin{multicols}{2}
-		\begin{enumerate}
-			\item Abgas
-			\item Interdigitalstruktur
-			\item Keramik
-			\item Isolation
-			\item Heizelement
-			\item Platinmäander
-		\end{enumerate}
-		\begin{figure}
-			\includegraphics[width=0.75\textheight]{feld.pdf}
-			\caption{\footnotesize{Explosionszeichnung des Sensors. Quelle\cite{feld}}}
-		\end{figure}
-	\end{multicols}
-	\end{frame}
-
-	\begin{frame}{Extinktionsmessung}
-		\begin{block}{Funktionsweise}
-			\footnotesize Bei der Extinktionsmessung wird die Reduktion der Lichtintensität eines Lichtstrahls beim Durchgang einer Flüssigkeit gemessen. Je mehr Partikel sich im Testobjekt befinden, desto größer ist die Abschwächung.
-			\begin{figure}
-				\includegraphics[width=\textheight]{extinktion.pdf}
-				\caption{\footnotesize{Fotometrische Extinktionsmessung. Quelle\cite{messtechniken}}}
-			\end{figure}
-		\end{block}
-	\end{frame}
-
-	\begin{frame}{Streulichtmessung}
-		\begin{block}{Funktionsweise}
-			\begin{multicols}{2}
-				\footnotesize Bei der Streulichtmessung wird eine parallele Lichtquelle herangezogen.
-				Trifft das Licht auf einen Partikel, kommt es zur Streuung des Lichtes. Eintretende Effekte sind Beugung, Brechung und Reflexion.
-				Die Erfassung der Streulicht-Intensitätsverteilung kann auf die Größe des erfassten Partikels rückgeschlossen werden.
-				\begin{figure}
-					\includegraphics[width=0.6\textheight]{streulicht.pdf}
-					\caption{\footnotesize{Streuung an einem einzelnen Partikel. Quelle\cite{messtechniken}}}
-				\end{figure}
-			\end{multicols}
-		\end{block}
-	\end{frame}
-
-	\begin{frame}{Streulichtmessung an Partikelkollektiven (Laserbeugung)}	
-		\begin{block}{Funktionsweise}
-			\footnotesize Bei Anwendung der Streulichtmessung auf einen mit Partikeln durchsetzten Raum und der nachgelagerten Weiterverarbeitung durch eine Linse, entsteht eine abweichendes Beugungsspektrum auf einer Projektionsfläche. Durch die Auswertung der verschieden Beugungsspektren ist kann mathematisch auf Anzahl und Größe der Partikel rückgeschlossen werden.
-			\begin{figure}
-				\includegraphics[width=0.8\textheight]{laser.pdf}
-				\caption{\footnotesize{Streuung an einem Partikelkollektiv. Quelle\cite{messtechniken}}}
-			\end{figure}
-		\end{block}
+	\begin{frame}{Realisierung}
+	\framesubtitle{Implementierung in MATLAB}
+	\section{Realisierung}	
 	\end{frame}
 
 	\begin{frame}{Fazit}
 	\section{Fazit}
 	\begin{itemize}
-		\item Viele Unterschiedliche Methoden
-		\item Stark abhängig von der Anwendungsfall
-		\item Maßstäbe zur Auswahl:
-		\begin{itemize}
-			\item Partikelgröße
-			\item Spezielle Materialeigenschaften
-			\item Gewünschte Information (Größe, Dichte)
-			\item Präzision
-		\end{itemize}
+		\item Platzhalter
 	\end{itemize}
 	\end{frame}
 	
