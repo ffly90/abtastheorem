@@ -90,9 +90,38 @@
 	
 	\begin{frame}{Theoretische Grundlagen}
 	\section{Theoretische Grundlagen}
+	%	Die Digitalisierung eines kontinuierlichen Bildes bedeutet einen enor-
+	%	men Datenverlust, da wir die kontinuierliche Grauwertinformation auf
+	%	eine Funktion auf einem Raster von Punkten reduzieren. Es stellt sich al-
+	%	so die entscheidende Frage, unter welchen Bedingungen wir sicherstellen
+	%	können, dass die Abtastpunkte das kontinuierliche Bild realitätsgetreu,
+	%	also ohne Informationsverlust, wiedergeben. Zusätzlich interessiert uns,
+	%	wie sich ein kontinuierliches Bild aus den Abtastpunkten rekonstruieren
+	%	lässt.
+	\nocite{bildverarbeitung}
 	\begin{itemize}
 		\item Platzhalter
 	\end{itemize}
+	\end{frame}
+
+	\begin{frame}{Abtasttheorem}
+	\begin{block}{Aufbau}
+		Das Abtasttheorem formuliert die Bedingung, welche nötig ist um eine Verfälschung des Signals bei der Abtastung zu vermeiden:
+	\end{block}
+	\begin{multicols}{2}
+		
+	
+	\begin{itemize}
+		\item Aus Abbildung ergibt sich $(f_p-f_g)-f_g \ge 0$
+		\item Daraus lässt sich folgendes Ableiten: $f_p \ge 2f_g$
+		\item $f_p$ ist hierbei die Abtastfrequenz 
+	\end{itemize}
+	
+	\begin{figure}
+		\includegraphics[width=0.58\textheight]{abtasttheorem.pdf}
+		\caption{\footnotesize Bedingungen Abtasttheorem. Quelle\cite{lange}}
+	\end{figure}
+	\end{multicols}
 	\end{frame}
 
 	\begin{frame}{Praktische Anwendung}
