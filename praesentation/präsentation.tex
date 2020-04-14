@@ -3,6 +3,9 @@
 \usecolortheme{beaver}
 \setbeamertemplate{navigation symbols}{}
 
+\usepackage{multimedia}
+\usepackage{graphicx} 
+\usepackage{animate}
 \usepackage{multicol}
 \usepackage{cite}
 \usepackage[utf8]{inputenc}
@@ -155,13 +158,37 @@
 	\end{frame}
 
 	\begin{frame}{2D Aliasing-Effekt}
-
-	
+	\framesubtitle{Moiré-Effekt}
+	\begin{figure}
+		\includegraphics[width=0.7\textheight]{moire.pdf}
+		\movie[height=3.5cm, width=5cm, poster, loop]{}{moire.mpg}
+		\caption{\footnotesize Der Moiré-Effekt: \textbf{a} Originalbild mit zwei periodischen Mustern (oben $\hat{k} = [0.21, 0.22]^T$ , unten $\hat{k} = [0.21, 0.24]^T$ ). \textbf{b} Jeder vierte und \textbf{c} jeder fünfte Punkt in jeder	Richtung abgetastet. Quelle 1 (links)\cite{bildverarbeitung} Quelle 2 (rechts) \href{https://upload.wikimedia.org/wikipedia/en/4/42/Moir\%C3\%A9.gif}{Internet-Link}}
+	\end{figure}
 	\end{frame}
 
 	\begin{frame}{2D Abtasttheorem}
+	\begin{itemize}
+		\item Bei einem großen Bildspektrum können wir nicht vermeiden, dass es Überlappungen von Frequenzen gibt.
+		\item Wir können in diesen Fällen keine automatisierte Entscheidung treffen, welche Frequenz der korrekten Darstellung entspricht.
+		\item  Um Verzerrungen zu vermeiden, müssen wir Überlappungen ausschließen.
+		\item Wir müssen das Spektrum auf den Bereich um den zentralen Punkt des reziproken Gitters bis zu den Linien, die den Zentralgitterpunkt von allen anderen Gitterpunkten trennen, beschränken.
+	\end{itemize}
+	\end{frame}
 
-
+	\begin{frame}{2D Abtasttheorem}
+	\begin{itemize}
+		\item Auf einem Rechteckgitter ergibt sich daraus die einfache Bedingung,	dass die maximale Wellenzahl, bei der das Bildspektrum nicht null ist,
+		auf weniger als die Hälfte der Gitterkonstanten des reziproken Gitters beschränkt werden muss.
+		\item Quantitativ kann das so ausgedrückt werden: Ist das Spektrum $\tilde{g}(\kappa)$ einer kontinuierlichen Funktion $g(x)$ bandbegrenzt, d. h.
+		$$
+		\tilde{g}(\kappa) = 0 \forall \left\|k_d\right\|\ge \frac{k_d}{2}
+		$$
+		dann kann es aus Punkten welche mit der Schrittweite
+		$$
+		\Delta x_d = \frac{1}{k_d}
+		$$
+		abgetastet wurde exakt rekonstruiert werden.
+	\end{itemize}
 	\end{frame}
 
 
