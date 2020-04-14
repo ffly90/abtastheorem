@@ -198,6 +198,22 @@
 	\end{frame}
 	
 	\begin{frame}{Realisierung}
+	\framesubtitle{MATLAB: FFT2}
+	\section{Die Fourier-Transformation im Detail}	
+	Unser Programm verwendet die matlab-interne fft2-Funktion:
+	$$Y_{p+1,q+1} = \sum_{j=0}^{m-1}\sum_{k=0}^{n-1}e^{-2\pi i(\frac{jp}{m}+\frac{kq}{n})}X_{j+1,k+1}$$ mit $X$: Matrix im Ortsraum ($m\times n$), $p,j: 0 - m-1$, $q,k: 0 - n-1$
+
+	$Y$ ist ebenfalls eine ($m\times n$)-Matrix
+	\end{frame}
+	\begin{frame}{Realisierung}
+	\framesubtitle{MATLAB: FFT2}
+	\section{Die Fourier-Transformation im Detail}	
+	Vgl. DFT aus der Vorlesung
+	
+	Unterschied: Faktor $2\pi$, Division durch m/n
+	\end{frame}
+	
+	\begin{frame}{Realisierung}
 	\framesubtitle{Implementierung in MATLAB}
 	\section{Realisierung}	
 	\begin{itemize}
@@ -206,6 +222,7 @@
 	\end{itemize}
 
 	\end{frame}
+
 	\begin{frame}{Realisierung}
 	\framesubtitle{Implementierung in MATLAB}
 	\begin{itemize}
