@@ -199,7 +199,7 @@
 	
 	\begin{frame}{Realisierung}
 	\framesubtitle{MATLAB: FFT2}
-	\section{Die Fourier-Transformation im Detail}	
+	\section{Realisierung}	
 	Unser Programm verwendet die matlab-interne fft2-Funktion:
 	$$Y_{p+1,q+1} = \sum_{j=0}^{m-1}\sum_{k=0}^{n-1}e^{-2\pi i(\frac{jp}{m}+\frac{kq}{n})}X_{j+1,k+1}$$ mit $X$: Matrix im Ortsraum ($m\times n$), $p,j: 0 - m-1$, $q,k: 0 - n-1$
 
@@ -207,7 +207,6 @@
 	\end{frame}
 	\begin{frame}{Realisierung}
 	\framesubtitle{MATLAB: FFT2}
-	\section{Die Fourier-Transformation im Detail}	
 	Vgl. DFT aus der Vorlesung
 	
 	Unterschied: Faktor $2\pi$, Division durch m/n
@@ -215,7 +214,6 @@
 	
 	\begin{frame}{Realisierung}
 	\framesubtitle{Implementierung in MATLAB}
-	\section{Realisierung}	
 	\begin{itemize}
 		\item Berechnung der 2D-Fourier-Transformation
 		\item Bestimmung des \dq Schwellwertes\dq, ab dem wir den Wert der Fouriertransformierten als null annehmen: $Z = max(FFT)*0.001$	
