@@ -173,8 +173,22 @@
 	\begin{frame}{Realisierung}
 	\framesubtitle{Implementierung in MATLAB}
 	\section{Realisierung}	
-	\end{frame}
+	\begin{itemize}
+		\item Berechnung der 2D-Fourier-Transformation
+		\item Bestimmung des \dq Schwellwertes\dq, ab dem wir den Wert der Fouriertransformierten als null annehmen: $Z = max(FFT)*0.001$	
+	\end{itemize}
 
+	\end{frame}
+	\begin{frame}{Realisierung}
+	\framesubtitle{Implementierung in MATLAB}
+	\begin{itemize}
+	\item Iteration über die Fouriertransformierte, Bestimmung von $k_x$ und $k_y$ durch Vergleich mit $Z$
+	\item Bestimmung der Abtastdistanz: $d_x\leq \frac{1}{2k_x}*I_{Breite}$
+	\item Abtastung des Orginalbildes in der Distanz $d_x$ bzw. $d_y$, jeweils mittig
+	\item Anzeige des abgetasteten Bildes
+	\end{itemize}
+
+\end{frame}
 	\begin{frame}{Fazit}
 	\section{Fazit}
 	\begin{itemize}
