@@ -104,8 +104,38 @@
 	\end{itemize}
 	\end{frame}
 
-	\begin{frame}{Abtasttheorem}
-	\begin{block}{Aufbau}
+	\begin{frame}{Abtastung}
+	\begin{itemize}
+		\item Abtastung bedeutet, dass nur die Information an den Gitterpunkten erhalten bleibt
+		\item Mathematisch ist dies eine Multiplikation mit einer Funktion, die nur an den Gitterpunkten ungleich null ist
+		\item Diese Operation lässt sich durchführen, indem wir die Bildfunktion $g(x)$ mit einer Funktion multiplizieren, welche die Summe der an den Gitterpunkten $r_{m,n}$ sitzenden $\delta$-Funktionen darstellt
+		\item Diese Funktion wird in der Literatur oft als Nagelbrettfunktion oder 2D-$\delta$-Kamm bezeichnet
+	\end{itemize}
+	
+	\end{frame}
+
+	\begin{frame}{Abtastung}
+	\begin{itemize}
+		\item Eine dichte Abtastung im x-Raum führt zu einem weiten Gitter im k-Raum und umgekehrt. Damit führt die Abtastung zu einer Wiederholung des Bildspektrums an jedem Gittervektor im Fourierraum.
+		\item Es folgt, dass die Abtastung zu einer Reduktion der Auflösung führt, d. h., dass Strukturen von der Größe der Abtastschrittweite oder kleiner verloren gehen.
+	\end{itemize}
+	
+	\end{frame}
+
+	\begin{frame}{1D Aliasing-Effekt}
+	\begin{block}{Beschreibung}
+		Bei der Abtastung eines Signals mit einer Abtastfrequenz etwas kleiner als die Wellenlänge kommt es zum Aliasing-Effekt. Aus dem hochfrequenten Signal wird ein deutlich niederfrequenteres Signal abgetastet. 
+	\end{block}
+	
+	\begin{figure}
+		\includegraphics[width=\textheight]{antialiasing.pdf}
+		\caption{\footnotesize Veranschaulichung des Aliasing-Effektes. Quelle\cite{bildverarbeitung}}
+	\end{figure}
+	
+	\end{frame}
+
+	\begin{frame}{1D Abtasttheorem}
+	\begin{block}{Beschreibung}
 		Das Abtasttheorem formuliert die Bedingung, welche nötig ist um eine Verfälschung des Signals bei der Abtastung zu vermeiden:
 	\end{block}
 	\begin{multicols}{2}
@@ -123,6 +153,17 @@
 	\end{figure}
 	\end{multicols}
 	\end{frame}
+
+	\begin{frame}{2D Aliasing-Effekt}
+
+	
+	\end{frame}
+
+	\begin{frame}{2D Abtasttheorem}
+
+
+	\end{frame}
+
 
 	\begin{frame}{Praktische Anwendung}
 	\framesubtitle{Wo kommt das Abtasttheorem zum Einsatz?}
