@@ -221,12 +221,14 @@
 	Vgl. DFT aus der Vorlesung
 	
 	Unterschied: Faktor $2\pi$, Division durch m/n
+	
+	Wichtig für das $\Delta_x / \Delta_y$-Kriterium
 	\end{frame}
 	
 	\begin{frame}{Realisierung}
 	\framesubtitle{Implementierung in MATLAB}
 	\begin{itemize}
-		\item Berechnung der 2D-Fourier-Transformation
+		\item Berechnung der 2D-Fourier-Transformation mittels $fft2$
 		\item Bestimmung des \dq Schwellwertes\dq, ab dem wir den Wert der Fouriertransformierten als null annehmen: $Z = max(FFT)*0.001$	
 	\end{itemize}
 
@@ -241,11 +243,16 @@
 	\item Anzeige des abgetasteten Bildes
 	\end{itemize}
 
-\end{frame}
+	\end{frame}
+	\begin{frame}{Realisierung}
+	Demo
+	\end{frame}
 	\begin{frame}{Fazit}
 	\section{Fazit}
 	\begin{itemize}
-		\item Platzhalter
+		\item Faustregel: Je größer die Frequenzen, desto niedriger die Sampledistanz
+		\item Fouriertransformation zeigt Verteilung, und ermöglicht die Abschätzung
+		\item Praktische Anwendung: Kompression
 	\end{itemize}
 	\end{frame}
 	
