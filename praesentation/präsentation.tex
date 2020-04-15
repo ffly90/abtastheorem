@@ -110,24 +110,32 @@
 	\begin{frame}{Abtastung}
 	\begin{itemize}
 		\item Abtastung bedeutet, dass nur die Information an den Gitterpunkten erhalten bleibt
-		\item Mathematisch ist dies eine Multiplikation mit einer Funktion, die nur an den Gitterpunkten ungleich null ist
+		\item Multiplikation mit einer Funktion, die nur an den Gitterpunkten ungleich null ist
 		\item Diese Operation lässt sich durchführen, indem wir die Bildfunktion $g(x)$ mit einer Funktion multiplizieren, welche die Summe der an den Gitterpunkten $r_{m,n}$ sitzenden $\delta$-Funktionen darstellt
-		\item Diese Funktion wird in der Literatur oft als Nagelbrettfunktion oder 2D-$\delta$-Kamm bezeichnet
-	\end{itemize}
-	
+		\item Die Funktion wird in der Literatur oft als Nagelbrettfunktion oder 2D-$\delta$-Kamm bezeichnet
+	\end{itemize}	
 	\end{frame}
 
 	\begin{frame}{Abtastung}
-	\begin{itemize}
-		\item Eine dichte Abtastung im x-Raum führt zu einem weiten Gitter im k-Raum und umgekehrt. Damit führt die Abtastung zu einer Wiederholung des Bildspektrums an jedem Gittervektor im Fourierraum.
-		\item Es folgt, dass die Abtastung zu einer Reduktion der Auflösung führt, d. h., dass Strukturen von der Größe der Abtastschrittweite oder kleiner verloren gehen.
-	\end{itemize}
-	
+	\begin{multicols}{2}
+		\begin{itemize}
+			\small\item Eine dichte Abtastung im x-Raum führt zu einem weiten Gitter im k-Raum und umgekehrt. Damit führt die Abtastung zu einer Wiederholung des Bildspektrums an jedem Gittervektor im Fourierraum.
+			\item Die Abtastung führt zu einer Reduktion der Auflösung, das heißt, dass Strukturen von der Größe der Abtastschrittweite oder kleiner verloren gehen.
+		\end{itemize}
+		\begin{figure}
+			\includegraphics[width=0.6\textheight]{abtast1.pdf}
+			\caption{\tiny Fouriertransformierte kleines Quadrat Quelle\cite{fuchs}}
+		\end{figure}
+		\begin{figure}
+			\includegraphics[width=0.6\textheight]{abtast2.pdf}
+			\caption{\tiny Fouriertransformierte großes Quadrat Quelle\cite{fuchs}}
+		\end{figure}
+	\end{multicols}
 	\end{frame}
 
 	\begin{frame}{1D Aliasing-Effekt}
 	\begin{block}{Beschreibung}
-		Bei der Abtastung eines Signals mit einer Abtastfrequenz etwas kleiner als die Wellenlänge kommt es zum Aliasing-Effekt. Aus dem hochfrequenten Signal wird ein deutlich niederfrequenteres Signal abgetastet. 
+		\small Bei der Abtastung eines Signals mit einer Abtastfrequenz etwas kleiner als eine im Signal vorkommende Wellenlänge kann es zum Aliasing-Effekt kommen. Aus dem hochfrequenten Signal wird ein nicht vorhandenes niederfrequenteres Signal erkannt. Diese erkannte Frequenz wird Aliasfrequenz genannt 
 	\end{block}
 	
 	\begin{figure}
@@ -180,17 +188,20 @@
 		\item Auf einem Rechteckgitter ergibt sich daraus die einfache Bedingung,	dass die maximale Wellenzahl, bei der das Bildspektrum nicht null ist,
 		auf weniger als die Hälfte der Gitterkonstanten des reziproken Gitters beschränkt werden muss.
 		\item Quantitativ kann das so ausgedrückt werden: Ist das Spektrum $\tilde{g}(\kappa)$ einer kontinuierlichen Funktion $g(x)$ bandbegrenzt, d. h.
-		$$
-		\tilde{g}(\kappa) = 0 \forall \left\|k_d\right\|\ge \frac{k_d}{2}
-		$$
+		$$\tilde{g}(\kappa) = 0 \hspace{1em} \forall \left\|k_{x_1,x_2}\right\|\ge \frac{\Delta k_{x_1,x_2}}{2} $$
 		dann kann es aus Punkten welche mit der Schrittweite
-		$$
-		\Delta x_d = \frac{1}{k_d}
-		$$
-		abgetastet wurde exakt rekonstruiert werden.
+		$$\Delta x_{x_1,x_2} = \frac{1}{\Delta k_{x_1,x_2}} $$
+		abgetastet wurde exakt rekonstruiert werden.\cite{bildverarbeitung}
 	\end{itemize}
 	\end{frame}
 
+	\begin{frame}{2D Abtasttheorem}
+	\begin{itemize}
+		\item Wir erhalten nur dann eine korrekte periodische
+		Struktur, wenn wir pro Wellenlänge mindestens zwei Abtastpunkte setzen.
+		\item Die maximale Wellenzahl, die ohne Fehler abgetastet werden kann, wird als	Nyquist-Wellenzahl oder Grenzwellenzahl bezeichnet.
+	\end{itemize}
+\end{frame}
 
 	\begin{frame}{Praktische Anwendung}
 	\framesubtitle{Wo kommt das Abtasttheorem zum Einsatz?}
