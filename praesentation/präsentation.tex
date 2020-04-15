@@ -210,6 +210,8 @@
 	$$Y_{p+1,q+1} = \sum_{j=0}^{m-1}\sum_{k=0}^{n-1}e^{-2\pi i(\frac{jp}{m}+\frac{kq}{n})}X_{j+1,k+1}$$ mit $X$: Matrix im Ortsraum ($m\times n$), $p,j: 0 - m-1$, $q,k: 0 - n-1$
 
 	$Y$ ist ebenfalls eine ($m\times n$)-Matrix
+	
+	Vgl. \cite{fft2}
 	\end{frame}
 	\begin{frame}{Realisierung}
 	\framesubtitle{MATLAB: FFT2}
@@ -232,12 +234,12 @@
 	\begin{frame}{Realisierung}
 	\framesubtitle{Implementierung in MATLAB}
 	\begin{itemize}
-	\item Iteration über die Fouriertransformierte, Bestimmung von $k_x$ und $k_y$ durch Vergleich mit $Z$
+	\item Iteration über die Fouriertransformierte, Bestimmung von Grenzfrequenzen $k_x$ und $k_y$ durch Vergleich mit $Z$
 	\item Bestimmung der Abtastdistanz: $d_x\leq \frac{1}{2k_x}*I_{Breite}$
 	\item Abtastung des Orginalbildes in der Distanz $d_x$ bzw. $d_y$, jeweils mittig
 	\item Anzeige des abgetasteten Bildes
 	\end{itemize}
-
+	Berechnung Vgl. \cite{dip}
 	\end{frame}
 	\begin{frame}{Realisierung}
 	Demo
