@@ -115,6 +115,12 @@
 		\item Die Funktion wird in der Literatur oft als Nagelbrettfunktion oder 2D-$\delta$-Kamm bezeichnet
 	\end{itemize}	
 	\end{frame}
+	\begin{frame}{Abtastung}
+	\begin{figure}
+		\includegraphics[width=1.3\textheight]{sampling.pdf}
+		\caption{Beispiel Abtastung Quelle\cite{mit}}
+	\end{figure}
+	\end{frame}
 
 	\begin{frame}{Abtastung}
 	\begin{multicols}{2}
@@ -174,19 +180,35 @@
 	\end{figure}
 	\end{frame}
 
+	\begin{frame}{Exkurs: Abtastung und Fouriertransformation}
+		\begin{figure}
+			\includegraphics[width=0.7\textheight]{fourier.pdf}
+			\caption{\footnotesize Faltung, Abtastung und Diskretisierung. Quelle\cite{mit}}
+		\end{figure}
+	\end{frame}
+
 	\begin{frame}{2D Abtasttheorem}
 	\begin{itemize}
-		\item Bei einem großen Bildspektrum können wir nicht vermeiden, dass es Überlappungen von Frequenzen gibt.
-		\item Wir können in diesen Fällen keine automatisierte Entscheidung treffen, welche Frequenz der korrekten Darstellung entspricht.
+		\item Ist das Bildspektrum ausgedehnt, so überlappen sich die sich periodisch wiederholenden Kopien.
+		\item Wir können nicht unterscheiden, ob die spektralen Amplituden aus dem Originalspektrum im Zentrum oder von einer der Kopien stammen.
 		\item  Um Verzerrungen zu vermeiden, müssen wir Überlappungen ausschließen.
-		\item Wir müssen das Spektrum auf den Bereich um den zentralen Punkt des reziproken Gitters bis zu den Linien, die den Zentralgitterpunkt von allen anderen Gitterpunkten trennen, beschränken.
 	\end{itemize}
 	\end{frame}
 
 	\begin{frame}{2D Abtasttheorem}
 	\begin{itemize}
-		\item Auf einem Rechteckgitter ergibt sich daraus die einfache Bedingung,	dass die maximale Wellenzahl, bei der das Bildspektrum nicht null ist,
-		auf weniger als die Hälfte der Gitterkonstanten des reziproken Gitters beschränkt werden muss.
+		\item Wir müssen das Spektrum auf den Bereich um den zentralen Punkt des reziproken Gitters bis zu den Linien, die den Zentralgitterpunkt von allen anderen Gitterpunkten trennen, beschränken.
+	\end{itemize}
+	\begin{figure}
+		\includegraphics[width=1.3\textheight]{increase.pdf}
+		\caption{\footnotesize Faltung, Abtastung und Diskretisierung. Quelle\cite{mit}}
+	\end{figure}
+	\end{frame}
+
+	\begin{frame}{2D Abtasttheorem}
+	\begin{itemize}
+		\item Auf einem Rechteckgitter ergibt sich daraus die Bedingung, dass die maximale Wellenzahl, bei der das Bildspektrum nicht null ist,
+		auf weniger als die Hälfte des Abstands zwischen den Gitterpunkten in der Bildebene beschränkt werden muss.
 		\item Quantitativ kann das so ausgedrückt werden: Ist das Spektrum $\tilde{g}(\kappa)$ einer kontinuierlichen Funktion $g(x)$ bandbegrenzt, d. h.
 		$$\tilde{g}(\kappa) = 0 \hspace{1em} \forall \left\|k_{x_1,x_2}\right\|\ge \frac{\Delta k_{x_1,x_2}}{2} $$
 		dann kann es aus Punkten welche mit der Schrittweite
