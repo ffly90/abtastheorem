@@ -224,31 +224,11 @@
 		\item Die maximale Wellenzahl, die ohne Fehler abgetastet werden kann, wird als	Nyquist-Wellenzahl oder Grenzwellenzahl bezeichnet.
 	\end{itemize}
 	\end{frame}
-	
-	\begin{frame}{Realisierung}
-	\framesubtitle{MATLAB: FFT2}
-	\section{Realisierung}	
-	Unser Programm verwendet die matlab-interne fft2-Funktion:
-	$$Y_{p+1,q+1} = \sum_{j=0}^{m-1}\sum_{k=0}^{n-1}e^{-2\pi i(\frac{jp}{m}+\frac{kq}{n})}X_{j+1,k+1}$$ mit $X$: Matrix im Ortsraum ($m\times n$), $p,j: 0 - m-1$, $q,k: 0 - n-1$
 
-	$Y$ ist ebenfalls eine ($m\times n$)-Matrix
-	
-	Vgl. \cite{fft2}
-	\end{frame}
 	\begin{frame}{Realisierung}
-	\framesubtitle{MATLAB: FFT2}
-	Vgl. DFT aus der Vorlesung
-	
-	Unterschiedlich: Normierung, Division durch $m$ bzw. $n$
-	
-	$$ e^{-2\pi i(\frac{jp}{m}+\frac{kq}{n})} $$ vs. 
-	$$ e^{-i(jp+kq)} $$
-	
-	Wichtig für das $\Delta_x / \Delta_y$-Kriterium
-	\end{frame}
-	
-	\begin{frame}{Realisierung}
+	\section{Realisierung}	
 	\framesubtitle{Implementierung in MATLAB}
+	Ziel: Wie muss ich ein gegebenes Bild abtasten, um noch alle Informationen zu behalten?
 	\begin{itemize}
 		\item Berechnung der 2D-Fourier-Transformation mittels $fft2$
 		\item Bestimmung des \dq Schwellwertes\dq, ab dem wir den Wert der Fouriertransformierten als null annehmen: $Z = max(FFT)*0.001$	
@@ -266,6 +246,28 @@
 	\end{itemize}
 	Berechnung Vgl. \cite{dip}
 	\end{frame}
+	
+		\begin{frame}{Realisierung}
+	\framesubtitle{MATLAB: FFT2}
+	Unser Programm verwendet die matlab-interne fft2-Funktion:
+	$$Y_{p+1,q+1} = \sum_{j=0}^{m-1}\sum_{k=0}^{n-1}e^{-2\pi i(\frac{jp}{m}+\frac{kq}{n})}X_{j+1,k+1}$$ mit $X$: Matrix im Ortsraum ($m\times n$), $p,j: 0 - m-1$, $q,k: 0 - n-1$
+	
+	$Y$ ist ebenfalls eine ($m\times n$)-Matrix
+	
+	Vgl. \cite{fft2}
+	\end{frame}
+	\begin{frame}{Realisierung}
+	\framesubtitle{MATLAB: FFT2}
+	Vgl. DFT aus der Vorlesung
+	
+	Unterschiedlich: Normierung, Division durch $m$ bzw. $n$
+	
+	$$ e^{-2\pi i(\frac{jp}{m}+\frac{kq}{n})} $$ vs. 
+	$$ e^{-i(jp+kq)} $$
+	
+	Wichtig für das $\Delta_x / \Delta_y$-Kriterium
+	\end{frame}
+	
 	\begin{frame}{Realisierung}
 	Demo
 	\end{frame}
