@@ -78,20 +78,27 @@
 \begin{document}
 	\maketitle
 	\begin{frame}{Agenda}
-		\section{Agenda}
 		\begin{enumerate}
 			\item Theoretische Grundlagen
-			\item Praktische Anwendung
+			\begin{itemize}
+				\item Abtastung
+				\item 1D Aliasing-Effekt
+				\item 1D Abtasttheorem
+				\item 2D Aliasing-Effekt
+				\item 2D Abtasttheorem
+			\end{itemize}
 			\item Realisierung
 			\begin{itemize}
-				\item Platzhalter
+				\item MATLAB: FFT2
+				\item Implementierung in MATLAB
+				\item Demo
 			\end{itemize}
 			\item Fazit
 		\end{enumerate}
 	\end{frame}
 
 	
-	\begin{frame}{Theoretische Grundlagen}
+	\begin{frame}{Abtastung}
 	\section{Theoretische Grundlagen}
 	%	Die Digitalisierung eines kontinuierlichen Bildes bedeutet einen enor-
 	%	men Datenverlust, da wir die kontinuierliche Grauwertinformation auf
@@ -101,13 +108,6 @@
 	%	also ohne Informationsverlust, wiedergeben. Zusätzlich interessiert uns,
 	%	wie sich ein kontinuierliches Bild aus den Abtastpunkten rekonstruieren
 	%	lässt.
-	\nocite{bildverarbeitung}
-	\begin{itemize}
-		\item Platzhalter
-	\end{itemize}
-	\end{frame}
-
-	\begin{frame}{Abtastung}
 	\begin{itemize}
 		\item Abtastung bedeutet, dass nur die Information an den Gitterpunkten erhalten bleibt
 		\item Multiplikation mit einer Funktion, die nur an den Gitterpunkten ungleich null ist
@@ -201,11 +201,6 @@
 		Struktur, wenn wir pro Wellenlänge mindestens zwei Abtastpunkte setzen.
 		\item Die maximale Wellenzahl, die ohne Fehler abgetastet werden kann, wird als	Nyquist-Wellenzahl oder Grenzwellenzahl bezeichnet.
 	\end{itemize}
-\end{frame}
-
-	\begin{frame}{Praktische Anwendung}
-	\framesubtitle{Wo kommt das Abtasttheorem zum Einsatz?}
-	\section{Praktische Anwendung}
 	\end{frame}
 	
 	\begin{frame}{Realisierung}
